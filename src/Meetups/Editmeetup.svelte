@@ -10,7 +10,7 @@
   let imageUrl = "";
   const dispatch = createEventDispatcher();
   function submitForm() {
-    dispatch("", {
+    dispatch("save", {
       id: Math.random().toString(),
       title: title,
       subtitle: subtitle,
