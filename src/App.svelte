@@ -31,7 +31,7 @@
     }
   ];
 
-  let editMode;
+  let editMode = null;
 
   function addMeetup(event) {
     console.log(event);
@@ -59,6 +59,9 @@
     updatedMeetups[meetupIndex] = updatedMeetup;
     meetups = updatedMeetups;
   }
+  function cancelEdit() {
+    editMode = null;
+  }
 </script>
 
 <style>
@@ -78,7 +81,7 @@
   </div>
 
   {#if editMode == 'add'}
-    <Editmeetup on:save={addMeetup} />
+    <Editmeetup on:save={addMeetup} on:cancel={cancelEdit} />
   {/if}
   <MeetupGrid {meetups} on:togglefavorite={toggleFavorite} />
 </main>
