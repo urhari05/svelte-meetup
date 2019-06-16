@@ -2,7 +2,7 @@
   import Header from "./UI/Header.svelte";
   import MeetupGrid from "./Meetups/MeetupGrid.svelte";
   import TextInput from "./UI/TextInput.svelte";
-  import Button from './UI/Button.svelte';
+  import Button from "./UI/Button.svelte";
 
   let title = "";
   let subtitle = "";
@@ -113,5 +113,5 @@
       on:input={event => (description = event.target.value)} />
     <Button type="submit" caption="Save" />
   </form>
-  <MeetupGrid {meetups} on:togglefavorite="{toggleFavorite}" />
+  <MeetupGrid {meetups} on:togglefavorite={toggleFavorite} />
 </main>
