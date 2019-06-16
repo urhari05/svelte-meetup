@@ -45,6 +45,6 @@
   {#if controlType === 'textarea'}
     <textarea {rows} {id} {value} on:input />
   {:else}
-    <input {type} {id} {value} on:input />
+    <input type="{type}" {id} {value} on:input />
   {/if}
 </div>
